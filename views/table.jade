@@ -1,0 +1,30 @@
+form
+    table.table-condensed.table-striped
+        thead
+            tr
+                th.text-center Напрям підготовки
+                th(colspan="3").text-center Перелік конкурсних предметів
+            tbody
+                if (typeof tasks === "undefined")
+                    tr
+                        td
+                else
+                    each task in tasks
+                        tr
+                            td.col-lg-3(scope="row") #{task.name}
+                                each subj in task.subjects
+                                    if subj.requere == true
+                                        td.col-lg-3.text-center
+                                            p.subject #{subj.subject}
+                                            span.label.label-primary.weight #{subj.weight}
+                                            p.label.label-info.minball #{subj.minball} балів
+                                            p.clear
+                                td.col-lg-3.text-center
+                                    each subj in task.subjects
+                                        if subj.requere == false
+                                            p.subject #{subj.subject}
+                                            span.label.label-primary.weight #{subj.weight}
+                                            p.label.label-info.minball #{subj.minball} балів
+                                            p.clear
+
+

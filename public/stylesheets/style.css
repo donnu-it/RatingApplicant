@@ -1,0 +1,49 @@
+body {
+  padding-top: 50px;
+  font-family: "Segoe UI", "Segoe UI Light";
+  font-weight: 400;
+  font-size: 16px;
+}
+table{
+  display: none;
+}
+td, th{
+  border: 1px solid #ddd;
+}
+td{
+  width: 187px!important;
+}
+.intro{
+  color: #7f8c8d;
+}
+h1{
+  font-weight: 400;
+  color: #2c3e50;
+}
+a {
+  color: #00B7FF;
+}
+.well label {
+  display: block;
+}
+.well input {
+  margin-bottom: 5px;
+}
+.btn {
+  margin-top: 5px;
+  border: outset 1px #C8C8C8;
+}
+.weight, .minball {
+
+}
+.subject {
+  display: inline-block;
+
+}
+.weight {
+  float: right;
+}
+.minball {
+  float: right;
+  margin: 0 auto;
+}

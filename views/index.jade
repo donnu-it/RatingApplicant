@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  br
+  div.container
+    div.row
+      div.col-lg-4
+        div.panel.panel-primary
+          div.panel-heading.text-center Предмети
+          div.panel-body
+            div.checkbox
+              label
+                input(type="checkbox", value="Українська мова та література", name="subjectcheck", checked=true, disabled ).subjectcheck
+                Українська мова та література
+            div.checkbox
+              label
+                input(type="checkbox", value="Біологія", name="subjectcheck").subjectcheck
+                Біологія
+            div.checkbox
+              label
+                input(type="checkbox", value="Географія", name="subjectcheck").subjectcheck
+                Географія
+            div.checkbox
+              label
+                input(type="checkbox", value="Фізика", name="subjectcheck").subjectcheck
+                Фізика
+            div.checkbox
+              label
+                input(type="checkbox", value="Хімія", name="subjectcheck").subjectcheck
+                Хімія
+            div.checkbox
+              label
+                input(type="checkbox", value="Математика", name="subjectcheck").subjectcheck
+                Математика
+            div.checkbox
+              label
+                input(type="checkbox" value="Іноземна мова (Англійська мова; Французька мова; Німецька мова)").subjectcheck
+                Іноземна мова
+
+      div.col-lg-8
+        include table.jade
