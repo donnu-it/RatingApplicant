@@ -4,38 +4,68 @@ block content
   br
   div.container
     div.row
-      div.col-lg-4
+      div.col-lg-3.col-md-3.col-sm-4
         div.panel.panel-primary
           div.panel-heading.text-center Предмети
           div.panel-body
-            div.checkbox
-              label
-                input(type="checkbox", value="Українська мова та література", name="subjectcheck", checked=true, disabled ).subjectcheck
-                Українська мова та література
-            div.checkbox
-              label
-                input(type="checkbox", value="Біологія", name="subjectcheck").subjectcheck
-                Біологія
-            div.checkbox
-              label
-                input(type="checkbox", value="Географія", name="subjectcheck").subjectcheck
-                Географія
-            div.checkbox
-              label
-                input(type="checkbox", value="Фізика", name="subjectcheck").subjectcheck
-                Фізика
-            div.checkbox
-              label
-                input(type="checkbox", value="Хімія", name="subjectcheck").subjectcheck
-                Хімія
-            div.checkbox
-              label
-                input(type="checkbox", value="Математика", name="subjectcheck").subjectcheck
-                Математика
-            div.checkbox
-              label
-                input(type="checkbox" value="Іноземна мова (Англійська мова; Французька мова; Німецька мова)").subjectcheck
-                Іноземна мова
-
-      div.col-lg-8
-        include table.jade
+            div.row
+              div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+                div.checkbox
+                  label
+                    input(type="checkbox", value="Ukrainian language and literature", name="subjectcheck", checked=true, disabled ).subjectcheck
+                    span Українська мова та література
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.znoball
+                input(type="number", min="100", max="200", placeholder="бали", value="100").form-control#form-control0
+              div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+                div.checkbox
+                  label
+                    input(type="checkbox", value="Biology", name="subjectcheck").subjectcheck
+                    span Біологія
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.znoball
+                input(type="number", min="100", max="200", placeholder="бали", disabled, value="100").form-control#form-control1
+              div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+                div.checkbox
+                  label
+                    input(type="checkbox", value="Geography", name="subjectcheck").subjectcheck
+                    span Географія
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.znoball
+                input(type="number", min="100", max="200", placeholder="бали", disabled, value="100").form-control#form-control2
+              div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+                div.checkbox
+                  label
+                    input(type="checkbox", value="Physics", name="subjectcheck").subjectcheck
+                    span Фізика
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.znoball
+                input(type="number", min="100", max="200", placeholder="бали", disabled, value="100").form-control#form-control3
+              div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+                div.checkbox
+                  label
+                    input(type="checkbox", value="Chemistry", name="subjectcheck").subjectcheck
+                    span Хімія
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.znoball
+                input(type="number", min="100", max="200", placeholder="бали", disabled, value="100").form-control#form-control4
+              div.col-lg-8.col-md-8.col-sm-8.col-xs-8
+                div.checkbox
+                  label
+                    input(type="checkbox", value="Mathematics", name="subjectcheck").subjectcheck
+                    span Математика
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.znoball
+                input(type="number", min="100", max="200", placeholder="бали", disabled, value="100").form-control#form-control5
+              div.col-lg-8.col-md-8.col-sm-8.col-xs-8.col-xs-8
+                div.checkbox
+                  label
+                    input(type="checkbox" value="Foreign language").subjectcheck
+                    span Іноземна мова
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.znoball
+                input(type="number", min="100", max="200", placeholder="бали", disabled, value="100").form-control#form-control6
+              div.col-lg-8.col-md-8.col-sm-8.col-xs-8.col-xs-8
+                div.checkbox
+                  label
+                    input(type="checkbox" value="History").subjectcheck
+                    span Історія України
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.znoball
+                input(type="number", min="100", max="200", placeholder="бали", disabled, value="100").form-control#form-control7
+          div.panel-footer
+            div(disabled).btn-success.btn#btnRating Розрахувати конкурсний бал
+      div.col-lg-9.col-md-9.col-sm-8.content
+        include intro.jade

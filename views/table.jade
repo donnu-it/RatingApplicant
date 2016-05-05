@@ -10,21 +10,30 @@ form
                         td
                 else
                     each task in tasks
-                        tr
-                            td.col-lg-3(scope="row") #{task.name}
-                                each subj in task.subjects
-                                    if subj.requere == true
-                                        td.col-lg-3.text-center
-                                            p.subject #{subj.subject}
-                                            span.label.label-primary.weight #{subj.weight}
-                                            p.label.label-info.minball #{subj.minball} балів
-                                            p.clear
-                                td.col-lg-3.text-center
-                                    each subj in task.subjects
-                                        if subj.requere == false
-                                            p.subject #{subj.subject}
-                                            span.label.label-primary.weight #{subj.weight}
-                                            p.label.label-info.minball #{subj.minball} балів
-                                            p.clear
+                         tr
+                            td.col-lg-3.col-md-3.col-sm-3.col-xs-3(scope="row").td-info-rating.text-center
+                                    a(href='#{task.url}', target="_blank")
+                                        span #{task.name} &nbsp;
+                                        span.glyphicon.glyphicon-new-window(aria-hidden="true")
+                                    br
+                                    span.rating_text.minball
+                                    span.rating_value.minball
+                             each subj in task.subjects
+                                 if subj.requere == true
+                                     td.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center.requere.td-info-ball
+                                         p.subject #{subj.subject}
+                                         input(type="hidden", name="idsubject", value='#{subj.idsubject}').require-idsubject
+                                         span.inline-text Ваговий коефіцієнт:
+                                         span.weight &nbsp; #{subj.weight}
+                                         br
+                                         span.minball Мінімальний бал: #{subj.minball}
+                            td.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center.no-requere.td-info-ball.no-require-subj-info
+                                 each subj in task.subjects
+                                     if subj.requere == false
+                                        p.subject #{subj.subject}
+                                        input(type="hidden", name="idsubject", value='#{subj.idsubject}').no-require-idsubject
+                                        span.inline-text Ваговий коефіцієнт:
+                                        span.weight &nbsp; #{subj.weight}
+                                        span.minball Мінімальний бал: #{subj.minball}
 
 

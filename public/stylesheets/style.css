@@ -1,5 +1,4 @@
 body {
-  padding-top: 50px;
   font-family: "Segoe UI", "Segoe UI Light";
   font-weight: 400;
   font-size: 16px;
@@ -7,21 +6,28 @@ body {
 table{
   display: none;
 }
+table p{
+  margin: 10px 0 0 0;
+}
 td, th{
   border: 1px solid #ddd;
 }
-td{
-  width: 187px!important;
+th{
+  font-weight: 600;
 }
 .intro{
   color: #7f8c8d;
 }
 h1{
-  font-weight: 400;
+  font-weight: 300;
   color: #2c3e50;
 }
 a {
-  color: #00B7FF;
+  color: #333;
+}
+a:hover{
+  opacity:0.9;
+  text-decoration: none;
 }
 .well label {
   display: block;
@@ -33,17 +39,51 @@ a {
   margin-top: 5px;
   border: outset 1px #C8C8C8;
 }
-.weight, .minball {
-
+.znoball{
+  padding-left: 0;
 }
-.subject {
+.form-control{
+  margin-top: 10px;
+  padding: 0 5px;
+  height: 25px;
+  text-align: right;
+}
+
+.no-require-subj-info .minball, .no-require-subj-info .weight, .no-require-subj-info .inline-text{
+  display: none;
+}
+.no-require-subj-info .minball:last-child{
+  display: block;
+}
+.no-require-subj-info span:nth-last-child(2), .no-require-subj-info span:nth-last-child(3){
   display: inline-block;
+}
+.no-require-subj-info  p{
+  margin:0;
+}
+.panel-footer {
+  padding: 10px 0;
+  text-align: center;
+}
 
+.minball, .weight, .inline-text{
+  color: #ccc;
+  font-style: italic;
+  font-size: 14px;
 }
-.weight {
-  float: right;
-}
-.minball {
-  float: right;
-  margin: 0 auto;
+
+.number{
+  background: #EA4223;
+  margin-top: 25px;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  font-size: 24px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
