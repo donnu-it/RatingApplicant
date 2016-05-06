@@ -2,12 +2,13 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='//ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="icon", href='/images/favicon.ico')
   body
     block content
 
-    script(src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js')
-    script(src='//ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/bootstrap.min.js')
+    script(src='/javascripts/jquery-1.12.3.min.js')
+    script(src='/bootstrap/dist/js/bootstrap.min.js')
     script(src='/javascripts/main.js')
 

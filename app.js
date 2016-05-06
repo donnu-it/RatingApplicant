@@ -37,8 +37,6 @@ taskDao.init();
 app.post('/', taskList.showSubject.bind(taskList));
 
 app.get('/', taskList.showTasks.bind(taskList));
-app.post('/addtask', taskList.addTask.bind(taskList));
-app.post('/completetask', taskList.completeTask.bind(taskList));
 app.set('view engine', 'jade');
 
 
