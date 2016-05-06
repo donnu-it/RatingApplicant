@@ -10,7 +10,7 @@ $(".subjectcheck").click(function() {
         type: 'Post',
         data: JSON.stringify(data),
         contentType: 'application/json',
-        url: 'http://localhost:3000/',
+        url: 'http://ratingapplicant.azurewebsites.net/',
         success: function(data) {
             $('.content').html(data);
             $('table').css("display","block");
