@@ -12,8 +12,30 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var compressor = require('node-minify');
 
 var app = express();
+
+new compressor.minify({
+  type: 'clean-css',
+  fileIn: 'public/stylesheets/style.css',
+  fileOut: 'public/stylesheets/style-min.css',
+  callback: function(err, min){
+    console.log('Clean-css');
+    console.log(err);
+    //console.log(min);
+  }
+});
+
+new compressor.minify({
+  type: 'uglifyjs',
+  fileIn: 'public/javascripts/main.js',
+  fileOut: 'public/javascripts/main-min.js',
+  callback: function(err, min){
+    console.log(err);
+    //console.log(min); 
+  }
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
