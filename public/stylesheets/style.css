@@ -2,6 +2,8 @@ body {
   font-family: "Segoe UI", "Segoe UI Light";
   font-weight: 400;
   font-size: 16px;
+  margin: 15px 0;
+
 }
 table{
   display: none;
@@ -29,12 +31,7 @@ a:hover{
   opacity:0.9;
   text-decoration: none;
 }
-.well label {
-  display: block;
-}
-.well input {
-  margin-bottom: 5px;
-}
+
 .btn {
   margin-top: 5px;
   border: outset 1px #C8C8C8;
