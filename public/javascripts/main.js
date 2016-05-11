@@ -51,24 +51,36 @@ $('#btnRating').click(function()  {
     $('tr').each(function(){
         var sum = 0;
         var koef_value = [];
+        var min_value = [];
         var subject_no_requere = [];
         var subject_no_requere_value = [];
         var subject_requere = 0;
         var selected_value = 0;
         var i = 0;
+        var flag = 0;
+
 
         // отримати коефіцієнти предметів для кожного напряму підготоввки
         $(this).find('.td-info-ball .weight').each(function() {
             koef_value.push($(this).text());
         });
+        $(this).find('.td-info-ball .minball').each(function() {
+            min_value.push($(this).text());
+        });
         // отримати вибрані обов"язкові предмети та по них розрахувати конкурсний бал
         $(this).find('input.require-idsubject').each(function() {
             subject_requere = $(this).val();
+            if ( (subject_requere == 'Art competition')){
+                flag = 1;
+            }
             $(".subjectcheck:checked").each(function(){
                 selected_value = $(this).val();
                 var index = $(this).index('.subjectcheck');
                 if(subject_requere == selected_value) {
                     sum += $('#form-control' + index).val() * koef_value[i];
+                    if ($('#form-control' + index).val() < min_value[i]) {
+                        flag = 1;
+                    }
                     i++;
                 }
             });
@@ -88,8 +100,13 @@ $('#btnRating').click(function()  {
         // розрахувати по найбільшому балові із необов"якових предметів конкурсний бал та отримати загальний конкурсний бал по напряму
         subject_no_requere_value.sort().reverse();
         sum += subject_no_requere_value[0] * koef_value[2];
-        $(this).find('.td-info-rating .rating_value').text(sum);
-        $(this).find('.td-info-rating .rating_text').text("Конкурсний бал: ");
+        console.log("flag", flag);
+        if( flag == 0 ) {
+            $(this).find('.td-info-rating .rating_value').text(sum);
+            $(this).find('.td-info-rating .rating_text').text("Конкурсний бал: ");
+        }
+        flag = 0;
+        console.log("tr");
     });
 });
 
