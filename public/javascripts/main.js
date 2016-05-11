@@ -78,7 +78,7 @@ $('#btnRating').click(function()  {
                 var index = $(this).index('.subjectcheck');
                 if(subject_requere == selected_value) {
                     sum += $('#form-control' + index).val() * koef_value[i];
-                    if($('#form-control' + index).val() > 200)
+                    if($('#form-control' + index).val() > 200 || $('#form-control' + index).val() < 100)
                         flag = 1;
                     if ($('#form-control' + index).val() < min_value[i]) {
                         flag = 1;
