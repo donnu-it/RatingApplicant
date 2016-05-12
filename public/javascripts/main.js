@@ -57,7 +57,11 @@ $('input.form-control').on('change keyup', function() {
     $('table').find('.td-info-rating .rating_value').text("");
     $('table').find('.td-info-rating .rating_text').text("");
 });
-
+$('.input-group-addon').click(function() {
+    var value = $(this).val();
+    $('table').find('.td-info-rating .rating_value').text("");
+    $('table').find('.td-info-rating .rating_text').text("");
+});
 $('#btnRating').click(function()  {
     $('tr').each(function(){
         var sum = 0;
