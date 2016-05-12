@@ -1,13 +1,15 @@
 doctype html
-html
+html(lang="uk")
   head
     title= title
     link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-spinner.css')
     link(rel='stylesheet', href='/stylesheets/style-min.css')
   body
     block content
 
     script(src='/javascripts/jquery-1.12.3.min.js')
     script(src='/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/javascripts/jquery.spinner.js')
     script(src='/javascripts/main-min.js')
 

@@ -39,13 +39,22 @@ a:hover{
 .znoball{
   padding-left: 0;
 }
-.form-control{
-  margin-top: 10px;
-  padding: 0 5px;
-  height: 25px;
-  text-align: right;
-}
+.spinner.input-group .input-group-addon a.spin-up, .spinner.input-group .input-group-addon a.spin-down {
+  height: 10px;
+  width: 13px;
+  font-size: 10px;
 
+}
+.input-group.spinner{
+  margin-top: 10px;
+}
+.input-group-addon {
+  padding: 0;
+}
+.input-group .form-control {
+  width: 55px;
+  float: right;
+}
 .no-require-subj-info .minball, .no-require-subj-info .weight, .no-require-subj-info .inline-text{
   display: none;
 }
