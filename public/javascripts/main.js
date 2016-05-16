@@ -33,7 +33,6 @@ $(".subjectcheck").click(function() {
         success: function(data) {
             $('.content').html(data);
             $('table').css("display","block");
-            console.log(decodeURIComponent(data));
         }
     });
 });

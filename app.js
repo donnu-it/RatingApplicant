@@ -33,7 +33,6 @@ new compressor.minify({
   fileOut: 'public/javascripts/main-min.js',
   callback: function(err, min){
     console.log(err);
-    //console.log(min); 
   }
 });
 

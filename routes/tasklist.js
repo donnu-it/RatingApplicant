@@ -1,7 +1,6 @@
 var DocumentDBClient = require('documentdb').DocumentClient;
 var async = require('async');
 
-
 function TaskList(taskDao) {
     this.taskDao = taskDao;
 }
@@ -26,9 +25,8 @@ TaskList.prototype = {
                         B[j++] = items[i];
                 }
 
-                console.log(B);
                 res.send(res.render('table', {
-                    tasks: B
+                    tasks: B.toString("utf8")
                 }));
             }
             else {
@@ -43,5 +41,5 @@ TaskList.prototype = {
         res.render('index', {
             title: 'Донецький національний університет'
         });
-      },
+      }
 };
