@@ -1,6 +1,7 @@
 var DocumentDBClient = require('documentdb').DocumentClient;
 var async = require('async');
 
+
 function TaskList(taskDao) {
     this.taskDao = taskDao;
 }
@@ -24,7 +25,8 @@ TaskList.prototype = {
                     if (items[i].name !== B[j - 1].name)
                         B[j++] = items[i];
                 }
-                items = B;
+
+                console.log(B);
                 res.send(res.render('table', {
                     tasks: B
                 }));
@@ -36,7 +38,7 @@ TaskList.prototype = {
         });
 
     },
-    
+
     showTasks: function (req, res) {
         res.render('index', {
             title: 'Донецький національний університет'

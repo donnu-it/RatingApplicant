@@ -24,14 +24,16 @@ $(".subjectcheck").click(function() {
     var data = {};
     data.title = selected_value;
     $.ajax({
-
         type: 'Post',
         data: JSON.stringify(data),
-        contentType: 'application/json',
+        headers: {
+            'content-type': 'application/json'
+        },
         url: '/',
         success: function(data) {
             $('.content').html(data);
             $('table').css("display","block");
+            console.log(decodeURIComponent(data));
         }
     });
 });
