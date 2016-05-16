@@ -26,7 +26,7 @@ TaskList.prototype = {
                 }
 
                 res.send(res.render('table', {
-                    tasks: B.toString("utf8")
+                    tasks: B
                 }));
             }
             else {
