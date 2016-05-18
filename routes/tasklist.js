@@ -24,7 +24,6 @@ TaskList.prototype = {
                     if (items[i].name !== B[j - 1].name)
                         B[j++] = items[i];
                 }
-                items = B;
                 res.send(res.render('table', {
                     tasks: B
                 }));
@@ -32,7 +31,6 @@ TaskList.prototype = {
             else {
                 res.send(res.render('intro'));
             }
-
         });
 
     },
@@ -41,5 +39,5 @@ TaskList.prototype = {
         res.render('index', {
             title: 'Донецький національний університет'
         });
-      },
+      }
 };

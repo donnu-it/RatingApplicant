@@ -100,7 +100,7 @@ $('#btnRating').click(function()  {
                         flag = 1;
                     }
                     if ($('#form-control' + index).val() < min_value[i]) {
-                        flag = 1;
+                        flag = 3;
                     }
                     i++;
                 }
@@ -124,7 +124,13 @@ $('#btnRating').click(function()  {
 
         if( flag == 0 ) {
             $(this).find('.td-info-rating .rating_value').text(sum.round());
+            $(this).find('.td-info-rating .rating_value').removeClass('warning');
             $(this).find('.td-info-rating .rating_text').text("Конкурсний бал: ");
+        }
+        if( flag == 3 ) {
+            $(this).find('.td-info-rating .rating_value').text("Недостатня кількість балів");
+            $(this).find('.td-info-rating .rating_value').addClass('warning');
+            $(this).find('.td-info-rating .rating_text').text("");
         }
         flag = 0;
     });
