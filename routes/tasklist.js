@@ -34,7 +34,7 @@ TaskList.prototype = {
         });
 
     },
-    
+
     showTasks: function (req, res) {
         res.render('index', {
             title: 'Донецький національний університет'
