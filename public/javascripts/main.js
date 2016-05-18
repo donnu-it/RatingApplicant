@@ -129,7 +129,7 @@ $('#btnRating').click(function()  {
             $(this).find('.td-info-rating .rating_text').text("Конкурсний бал: ");
         }
         if( flag == 3 ) {
-            $(this).find('.td-info-rating .rating_value').text("Недостатня кількість балів");
+            $(this).find('.td-info-rating .rating_value').text("Кількість балів недостатня для вступу");
             $(this).find('.td-info-rating .rating_value').addClass('warning');
             $(this).find('.td-info-rating .rating_text').text("");
         }
