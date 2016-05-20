@@ -36,8 +36,11 @@ TaskList.prototype = {
     },
 
     showTasks: function (req, res) {
+        var today = new Date();
+        var year = today.getFullYear();
         res.render('index', {
-            title: 'Донецький національний університет'
+            title: 'Донецький національний університет',
+            year: year
         });
       }
 };

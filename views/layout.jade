@@ -7,8 +7,21 @@ html(lang="uk")
     link(rel='stylesheet', href='/stylesheets/bootstrap-spinner.css')
     link(rel='stylesheet', href='/stylesheets/style-min.css')
   body
+    header
+      .container
+        .row
+          .col-lg-12
+            a(href='https://www.donnu.edu.ua')
+             img(src='image/donnu-logo.png')
     block content
-
+    footer
+      .container
+        .row
+          .col-lg-12.footer-text.copyright
+            p &copy; 1937-#{year} Донецький національний університет
+            p.lineblock-text Використання будь-яких матеріалів, розміщених на даному сайті, дозволяється за умови посилання на
+            a(href='https://www.donnu.edu.ua').lineblock-text &nbsp;www.donnu.edu.ua.&nbsp;
+            p.line-text Для інтернет-видань &ndash; обов'язковим є пряме посилання, відкрите для пошукових систем.
     script(src='/javascripts/jquery-1.12.3.min.js')
     script(src='/bootstrap/dist/js/bootstrap.min.js')
     script(src='/javascripts/jquery.spinner.js')
